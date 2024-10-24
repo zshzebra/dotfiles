@@ -130,3 +130,12 @@ esac
 
 bindkey '^L' clear-screen
 export MICRO_TRUECOLOR=1
+
+alias yeet="yay -Rcs"
+
+# bun completions
+[ -s "/home/retzer/.bun/_bun" ] && source "/home/retzer/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
