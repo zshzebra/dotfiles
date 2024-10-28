@@ -1,6 +1,10 @@
 [global]
 frame_color = "#a6e3a1"
 separator_color= frame
+corner_radius = 8
+font = Open Sans 8
+monitor = 1
+progress_bar_corner_radius=4
 
 [urgency_low]
 background = "#1e1e2e"
