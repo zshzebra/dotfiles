@@ -9,7 +9,7 @@
 | Color Scheme   | Catppuccin    |
 | Window Manager | Hyprland      |
 | Bar            | Waybar        |
-| Text Editors   | vscode, micro |
+| Text Editors   | vscode, micro, neovim |
 | Shell          | zsh           |
 | Terminal       | Kitty         |
 
@@ -21,7 +21,7 @@
  * Kitty - `kitty`
  * Hyprland - `hyprland`
  * Waybar - `waybar`
- * Text Editor - `visual-studio-code-bin`, `micro`
+ * Text Editor - `visual-studio-code-bin`, `micro`, `neovim`
  * ZSH - `zsh`
 
 ### Process
