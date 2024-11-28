@@ -4,29 +4,30 @@
 
 ## Packages
 
-| Program        | Name          |
-|----------------|---------------|
-| Color Scheme   | Catppuccin    |
-| Window Manager | Hyprland      |
-| Bar            | Waybar        |
+| Program        | Name                  |
+| -------------- | --------------------- |
+|               Color Scheme   | Catppuccin            |
+| Window Manager | Hyprland              |
+| Bar            | Waybar                |
 | Text Editors   | vscode, micro, neovim |
-| Shell          | zsh           |
-| Terminal       | Kitty         |
+| Shell          | zsh                   |
+| Terminal       | Kitty                 |
 
 ## Installation
 
 ### Requirements
 
- * GNU Stow - `stow`
- * Kitty - `kitty`
- * Hyprland - `hyprland`
- * Waybar - `waybar`
- * Text Editor - `visual-studio-code-bin`, `micro`, `neovim`
- * ZSH - `zsh`
+- GNU Stow - `stow`
+- Kitty - `kitty`
+- Hyprland - `hyprland`
+- Waybar - `waybar`
+- Text Editor - `visual-studio-code-bin`, `micro`, `neovim`
+- ZSH - `zsh`
 
 ### Process
 
 #### 1. Clone the repository
+
 ```sh
 git clone https://github.com/pyscripter99/dotfiles.git
 ```
