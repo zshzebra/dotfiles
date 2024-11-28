@@ -26,6 +26,14 @@ return {
     end,
   },
 
+  {
+    "sbdchd/neoformat",
+    cmd = "Neoformat",
+    config = function()
+      require "configs.neoformat"
+    end,
+  }
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
