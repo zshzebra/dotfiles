@@ -6,7 +6,6 @@ local map = vim.keymap.set
 
 -- Normal Mode
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "<leader>ft", "<cmd> NvimTreeToggle <cr>")
 
 -- Insert Mode
 map("i", "jk", "<ESC>")

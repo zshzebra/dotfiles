@@ -26,7 +26,8 @@ require("lazy").setup({
 }, lazy_config)
 
 -- load theme
-dofile(vim.g.base46_cache .. "defaults")
+-- NOTE: base46 highlighting isn't cached as so to work with Hop.nvim
+require("base46").load_all_highlights()
 dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
