@@ -30,14 +30,6 @@ return {
   },
 
   {
-    "sbdchd/neoformat",
-    cmd = "Neoformat",
-    config = function()
-      require "configs.neoformat"
-    end,
-  },
-
-  {
     "smoka7/hop.nvim",
     version = "v2",
     keys = {
