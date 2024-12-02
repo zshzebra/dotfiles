@@ -33,7 +33,7 @@ return {
     "smoka7/hop.nvim",
     version = "v2",
     keys = {
-      { "f", "<cmd> HopWord <cr>", desc = "Hop by word" },
+      { "<leader>z", "<cmd> HopWord <cr>", desc = "Hop by word" },
     },
     opts = {
       require "configs.hop",

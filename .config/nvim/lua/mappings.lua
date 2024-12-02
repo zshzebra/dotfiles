@@ -4,9 +4,6 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
--- Normal Mode
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
 -- Insert Mode
 map("i", "jk", "<ESC>")
 
