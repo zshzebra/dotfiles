@@ -1,4 +1,4 @@
-# Pyscripter99's Dotfiles
+# ZshZebra's Dotfiles
 
 ![Desktop Preview](assets/home.png)
 
@@ -52,3 +52,7 @@ Run this command everytime you add or remove a new file. Note changes to a file'
 #### 4. Logout or Reboot and enjoy
 
 The setup is now complete, if you have any suggestions feel free to make an issue.
+
+## Notes
+
+Checkout what I have done with my NeoVim [here](https://github.com/zshzebra/dotfiles/tree/main/.config/nvim)
