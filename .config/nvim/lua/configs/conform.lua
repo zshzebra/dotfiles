@@ -5,6 +5,9 @@ local options = {
     html = { "prettier" },
     svelte = { "prettier" },
     markdown = { "prettier" },
+    ts = {"prettier"},
+    js = {"prettier"},
+    py = {"black"},
   },
 
   format_on_save = {

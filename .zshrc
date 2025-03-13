@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting pnpm-shell-completion pyenv bun aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
-  export EDITOR='micro'
+  export EDITOR='helix'
 fi
 
 # Compilation flags
@@ -110,6 +110,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias hacker-man="kitty --detach --start-as=fullscreen --override font_size=20 cmatrix -M \"Hacking the mainframe...\""
+alias clone="cd ~/clones && git clone "
+alias hx="helix"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -131,7 +133,9 @@ esac
 bindkey '^L' clear-screen
 export MICRO_TRUECOLOR=1
 
-alias yeet="yay -Rcs"
+# Using paru instead of yay now :(, but yeet is just too good.
+alias yay="paru"
+alias yeet="paru -Rcs"
 
 # bun completions
 [ -s "/home/retzer/.bun/_bun" ] && source "/home/retzer/.bun/_bun"
@@ -139,3 +143,5 @@ alias yeet="yay -Rcs"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval $(thefuck --alias)

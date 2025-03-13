@@ -66,12 +66,15 @@ return {
         "svelte",
         "typescript",
         "javascript",
+        "jsdoc",
         "rust",
         "go",
       },
     },
+    config = function()
+      require "configs.treesitter"
+    end,
   },
-
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = {
@@ -80,5 +83,44 @@ return {
     },
     cmd = "RenderMarkdown",
     opts = {},
-  }
+  },
+  {
+    "frankroeder/parrot.nvim",
+    dependencies = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "BufEnter",
+    config = function ()
+      require("parrot").setup {
+        providers = {
+          anthropic = {
+            api_key = os.getenv "ANTHROPIC_API_KEY",
+          }
+        },
+      }
+    end
+  },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {},
+    event = "BufEnter"
+  },
+  {
+    "mbbill/undotree",
+    cmd = "UndotreeToggle",
+    keys = {
+      "<leader>u", "<cmd> UndotreeToggle <cr>", desc = "Toggle Undotree",
+    }
+  },
+  {
+    "salkin-mada/openscad.nvim",
+    ft = {"scad"},
+    config = function ()
+      vim.g.openscad_load_snippets = true
+      require("openscad")
+    end,
+    dependencies = {
+      "L3MON4D3/LuaSnip",
+      "junegunn/fzf.vim",
+    },
+  },
 }

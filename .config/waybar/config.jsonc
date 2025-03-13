@@ -1,74 +1,46 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "power-profiles-daemon", "custom/power"],
-    "custom/arch": {
-      "format": "   ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
-    },
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "network", "battery", "power-profiles-daemon", "clock"],
     "hyprland/workspaces": {
       "format": "{name}",
-      "format": "{icon}",
       "tooltip": false,
-      "all-outputs": true,
-      "format-icons": {
-        "active": " ",
-        "default": " "
-      }
+      "all-outputs": true
+    },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10,
+      "show-passive-icons": true,
     },
     "clock": {
-      "format": "  {:%H:%M}",
-    },
-    "backlight": {
-      "device": "intel_backlight",
-      "format": "{icon} {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
+      "format": "<span color='#a6adc8'>TIME:</span> {:%H:%M}",
     },
     "pulseaudio": {
-      "format": "{icon} {volume}%",
-      "format-muted": "",
+      "format": "<span color='#a6adc8'>VOL:</span> {volume}%",
+      "format-muted": "Muted",
       "tooltip": false,
-      "format-icons": {
-        "headphone": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", " ", " ", " "]
-      },
-      "scroll-step": 1,
-    },
-    "bluetooth": {
-      "format": " {status}",
-      "format-disabled": "", // an empty format will hide the module
-      "format-connected": " {num_connections}",
-      "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+      "scroll-step": 5,
     },
     "network": {
       "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "  {essid}",
-      "format-ethernet": "{ipaddr}/{cidr}  ",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span> No Network",
+      "format-wifi": "<span color='#a6adc8'>WIFI:</span> {essid}",
+      "format-ethernet": "<span color='#a6adc8'>ETH:</span> {ipaddr}",
+      "format-disconnected": "NO NETWORK",
       "tooltip": false,
     },
     "battery": {
-      "format": "{icon} {capacity}%",
-      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-      "format-charging": "󰂄 {capacity}%",
+      "format": "<span color='#a6adc8'>BAT:</span> {capacity}%",
+      "format-charging": "<span color='#a6adc8'>CHRG:</span> {capacity}%",
       "tooltip": false,
     },
     "power-profiles-daemon": {
         "format": "{icon}",
         "format-icons": {
-             "default": " ",
-             "performance": " ",
-             "balanced": " ",
-             "power-saver": "󱧥 "
+             "performance": "PERFORMANCE",
+             "balanced": "BALANCED",
+             "power-saver": "POWER SAVING"
         },
         "tooltip": false,
-    },
-    "custom/power": {
-    	"format": "⏻ ",
-    	"on-click": "rofi-power",
-    },
+    }
 }

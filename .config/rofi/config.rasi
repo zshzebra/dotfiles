@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "alacritty";
@@ -7,10 +7,8 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 󰕰  Window";
-    display-Network: " 󰤨  Network";
+    display-drun: "APPS";
+    display-run: "RUN";
     sidebar-mode: true;
 }
 
