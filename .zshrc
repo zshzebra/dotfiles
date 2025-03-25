@@ -1,3 +1,4 @@
+eval "$(zellij setup --generate-auto-start zsh)"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -79,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting pnpm-shell-completion pyenv bun aws)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting pnpm-shell-completion pyenv bun aws sudo ssh man golang zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,9 +116,6 @@ alias hx="helix"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Zoxide
-eval "$(zoxide init zsh --cmd cd)"
 
 # Created by `pipx` on 2024-07-13 09:14:11
 export PATH="$PATH:/home/retzer/.local/bin"
