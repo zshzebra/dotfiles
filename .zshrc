@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting pnpm-shell-completion pyenv bun aws sudo ssh man golang zoxide)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting pnpm-shell-completion pyenv bun aws sudo ssh man golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,3 +143,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval $(thefuck --alias)
+eval "$(zoxide init zsh --cmd cd)"
