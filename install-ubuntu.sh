@@ -46,7 +46,7 @@ exit
 fi
 
 echo "Install Oh-My-Zsh"
-curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+curl -o install.sh -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 RUNZSH=no CHSH=no sh install.sh
 sh install.sh --unattended
 
