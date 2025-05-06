@@ -46,6 +46,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Stow configuration"
+mv ~/.zshrc ~/.zshrc.pre-stow
 stow . --ignore="\.(sh|md)$"
 
 if [ $? -ne 0 ]; then
