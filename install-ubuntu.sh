@@ -37,14 +37,6 @@ DEBIAN_FRONTEND="noninteractive" sudo apt-get update
 echo "Install stow, zsh and helix"
 DEBIAN_FRONTEND="noninteractive" sudo apt-get install stow zsh helix
 
-echo "Stow configuration"
-stow . --ignore="\.(sh|md)$"
-
-if [ $? -ne 0 ]; then
-echo "Conflicting files found, please backup then remove them"
-exit
-fi
-
 echo "Install Oh-My-Zsh"
 curl -o install.sh -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 RUNZSH=no CHSH=no sh install.sh
@@ -52,6 +44,14 @@ RUNZSH=no CHSH=no sh install.sh
 echo "Install plugins"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Stow configuration"
+stow . --ignore="\.(sh|md)$"
+
+if [ $? -ne 0 ]; then
+echo "Conflicting files found, please backup then remove them"
+exit
+fi
 
 echo "Change shell"
 sudo chsh --shell /bin/zsh
