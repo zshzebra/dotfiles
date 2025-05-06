@@ -48,7 +48,6 @@ fi
 echo "Install Oh-My-Zsh"
 curl -o install.sh -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 RUNZSH=no CHSH=no sh install.sh
-sh install.sh --unattended
 
 echo "Install plugins"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
